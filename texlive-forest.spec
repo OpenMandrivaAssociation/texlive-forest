@@ -1,11 +1,11 @@
-# revision 28979
+# revision 31930
 # category Package
 # catalog-ctan /graphics/pgf/contrib/forest
-# catalog-date 2013-01-29 10:13:54 +0100
+# catalog-date 2013-10-17 10:50:39 +0200
 # catalog-license lppl1.3
-# catalog-version 1.03
+# catalog-version 1.04
 Name:		texlive-forest
-Version:	1.03
+Version:	1.04
 Release:	1
 Summary:	Drawing (linguistic) trees
 Group:		Publishing

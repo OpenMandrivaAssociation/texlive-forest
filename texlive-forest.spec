@@ -6,7 +6,7 @@
 # catalog-version 1.04
 Name:		texlive-forest
 Version:	1.04
-Release:	3
+Release:	4
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/forest

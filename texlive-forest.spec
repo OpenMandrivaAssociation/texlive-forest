@@ -1,12 +1,12 @@
-# revision 31930
+# revision 33116
 # category Package
 # catalog-ctan /graphics/pgf/contrib/forest
-# catalog-date 2013-10-17 10:50:39 +0200
+# catalog-date 2014-03-07 15:12:26 +0100
 # catalog-license lppl1.3
-# catalog-version 1.04
+# catalog-version 1.05
 Name:		texlive-forest
-Version:	1.04
-Release:	5
+Version:	1.05
+Release:	1
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/forest
@@ -21,15 +21,15 @@ Requires(post):	texlive-kpathsea
 
 %description
 The package is provides a PGF/TikZ-based mechanism for drawing
-linguistic (and other kinds of) trees. Its main features are: -
-a packing algorithm which can produce very compact trees; - a
-user-friendly interface consisting of the familiar bracket
-encoding of trees plus the key-value interface to option-
-setting; - many tree-formatting options, with control over
-option values of individual nodes and mechanisms for their
-manipulation; - the possibility to decorate the tree using the
-full power of PGF/TikZ; and - an externalization mechanism
-sensitive to code-changes.
+linguistic (and other kinds of) trees. Its main features are: a
+packing algorithm which can produce very compact trees; a user-
+friendly interface consisting of the familiar bracket encoding
+of trees plus the key-value interface to option-setting; many
+tree-formatting options, with control over option values of
+individual nodes and mechanisms for their manipulation; the
+possibility to decorate the tree using the full power of
+PGF/TikZ; and an externalization mechanism sensitive to code-
+changes.
 
 %post
     %{_sbindir}/texlive.post

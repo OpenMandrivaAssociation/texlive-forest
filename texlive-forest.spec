@@ -1,12 +1,6 @@
-# revision 33116
-# category Package
-# catalog-ctan /graphics/pgf/contrib/forest
-# catalog-date 2014-03-07 15:12:26 +0100
-# catalog-license lppl1.3
-# catalog-version 1.05
 Name:		texlive-forest
-Version:	1.05
-Release:	5
+Version:	2.1.5
+Release:	1
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/forest
@@ -41,12 +35,10 @@ changes.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/forest/forest.sty
-%doc %{_texmfdistdir}/doc/latex/forest/README
-%doc %{_texmfdistdir}/doc/latex/forest/forest.pdf
+%{_texmfdistdir}/tex/latex/forest
+%doc %{_texmfdistdir}/doc/latex/forest
 #- source
-%doc %{_texmfdistdir}/source/latex/forest/forest.dtx
-%doc %{_texmfdistdir}/source/latex/forest/forest.ins
+%doc %{_texmfdistdir}/source/latex/forest
 
 #-----------------------------------------------------------------------
 %prep

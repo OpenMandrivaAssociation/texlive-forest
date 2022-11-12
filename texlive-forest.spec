@@ -1,13 +1,13 @@
 Name:		texlive-forest
-Version:	2.1.5
-Release:	2
+Version:	57398
+Release:	1
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/forest
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +26,12 @@ PGF/TikZ; and an externalization mechanism sensitive to code-
 changes.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,7 +42,8 @@ changes.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 

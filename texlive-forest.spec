@@ -1,6 +1,6 @@
 Name:		texlive-forest
 Version:	57398
-Release:	1
+Release:	2
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/forest

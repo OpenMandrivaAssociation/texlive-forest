@@ -3,7 +3,7 @@ Version:	57398
 Release:	2
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/forest
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/forest
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.doc.r%{version}.tar.xz

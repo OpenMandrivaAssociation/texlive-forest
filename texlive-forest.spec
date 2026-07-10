@@ -1,52 +1,37 @@
-Name:		texlive-forest
-Version:	57398
-Release:	2
+%global tl_name forest
+%global tl_revision 78931
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.1.5
+Release:	%{tl_revision}.1
 Summary:	Drawing (linguistic) trees
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/forest
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/forest.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Requires:	texlive(elocalloc)
+Requires:	texlive(environ)
+Requires:	texlive(etoolbox)
+Requires:	texlive(inlinedef)
+Requires:	texlive(l3packages)
+Requires:	texlive(pgf)
+Requires:	texlive(pgfopts)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package is provides a PGF/TikZ-based mechanism for drawing
-linguistic (and other kinds of) trees. Its main features are: a
-packing algorithm which can produce very compact trees; a user-
-friendly interface consisting of the familiar bracket encoding
-of trees plus the key-value interface to option-setting; many
-tree-formatting options, with control over option values of
-individual nodes and mechanisms for their manipulation; the
-possibility to decorate the tree using the full power of
-PGF/TikZ; and an externalization mechanism sensitive to code-
-changes.
+The package provides a PGF/TikZ-based mechanism for drawing linguistic
+(and other kinds of) trees. Its main features are: a packing algorithm
+which can produce very compact trees; a user-friendly interface
+consisting of the familiar bracket encoding of trees plus the key-value
+interface to option-setting; many tree-formatting options, with control
+over option values of individual nodes and mechanisms for their
+manipulation; the possibility to decorate the tree using the full power
+of PGF/TikZ; and an externalization mechanism sensitive to code-changes.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/forest
-%doc %{_texmfdistdir}/doc/latex/forest
-#- source
-%doc %{_texmfdistdir}/source/latex/forest
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
